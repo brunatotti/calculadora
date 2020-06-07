@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="action_page.php" method="post">
+    <form method="post">
         <div class="imgcontainer">
             <img src="../static/img/logo_calculadora_preto_vertical.png" alt="Avatar" class="avatar">
         </div>
@@ -20,12 +20,11 @@
 
             <label for="psw"><b>Senha</b></label>
             <input type="password" placeholder="Digite a senha" name="psw" required>
-
-            <button type="submit" href="{{ url_for('index') }}">Entrar</button>
-            <span><a href="{{ url_for('cadastro') }}">Efetuar cadastro</a></span>
-            <span class="psw">Esquece a <a href="{{ url_for('cadastro') }}">senha?</a></span>
+            
+            <a href="{{ url_for('index') }}" class="entrar_botao">Entrar</a><br>
+            <a href="{{ url_for('cadastro') }}" class="efetuar_cadastro">Efetuar cadastro</a><br>
         </div>
-
-
     </form>
-</body></html>
+
+</body>
+</html>

@@ -20,34 +20,43 @@ input[type=password] {
     font-family: sans-serif;
 }
 
-/* Set a style for all buttons */
-.button {
-    background-color: #4E73DF;
-    color: white;
-    padding: 15px 20px;
-    margin: 8px 0;
-    border: none;
+.entrar_botao {
+    display: block;
+    background: #3D94F6;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 10px;
+    margin: 10px 0px -10px 0px;
+    text-decoration: none;
     cursor: pointer;
-    width: 100%;
-    font-family: sans-serif;
+    text-align: center;
+}
+    
+.entrar_botao:hover {
+    background: #1E62D0;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-/* Add a hover effect for buttons */
-button:hover {
-    opacity: 0.7;
-}
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-    width: auto;
-    background-color: #D8D8D8;
-    color: black;
-    padding: 15px 20px;
-    margin: 8px 0;
-    border: none;
+.efetuar_cadastro {
+    display: block;
+    background: gray;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
     cursor: pointer;
-    width: 100%;
-    font-family: sans-serif;
+    text-align: center;
+}
+    
+.efetuar_cadstro:hover {
+    background: dark gray;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 /* Center the avatar image inside this container */
@@ -58,7 +67,7 @@ button:hover {
 
 /* Avatar image */
 img.avatar {
-    width: 30%;
+    width: 20%;
 }
 
 /* Add padding to containers */
@@ -72,13 +81,11 @@ span.psw {
 }
 
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
     span.psw {
         display: block;
         float: none;
     }
-
-    .cancelbtn {
-        width: 100%;
-    }
 }
+ 
+
