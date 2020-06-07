@@ -7,4 +7,5 @@ Projeto web de uma calculadora
 - Organização das pastas MVC;
 - Instalação do requirements.txt (Flask e Jinja: pip install -r requirements.txt);
 - Criação das páginas html;
-- Criação dos estilos com css e bootstrap.
+- Criação dos estilos com css e bootstrap;
+- Criação dos vínculos entre as páginas.
