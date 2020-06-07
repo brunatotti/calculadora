@@ -21,10 +21,9 @@
             <label for="psw"><b>Senha</b></label>
             <input type="password" placeholder="Digite a senha" name="psw" required>
 
-            <button type="submit">Entrar</button>
-            <button type="submit" class="cancelbtn">Cancelar</button>
-            <span><a href="cadastro.html">Efetuar cadastro</a></span>
-            <span class="psw">Esquece a <a href="#">senha?</a></span>
+            <button type="submit" href="{{ url_for('index') }}">Entrar</button>
+            <span><a href="{{ url_for('cadastro') }}">Efetuar cadastro</a></span>
+            <span class="psw">Esquece a <a href="{{ url_for('cadastro') }}">senha?</a></span>
         </div>
 
 

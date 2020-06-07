@@ -21,7 +21,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5 col-xl-6">
-                            <a class="navbar-brand logo" href="index.html">
+                            <a class="navbar-brand logo" href="index">
                                 <img src="../static/img/logo_calculadora_branco_horizontal.png" alt="Avatar" class="avatar">
                             </a>
                         </div>
@@ -29,7 +29,7 @@
                         <div class="col-lg-4 col-xl-5">
                             <div class="collapse navbar-collapse" id="navcol-1">
                                 <ul class="nav navbar-nav ml-auto">
-                                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.html">Login</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -65,8 +65,8 @@
                                     <label for="senha"><b>Senha</b></label>
                                     <input type="password" class="form-control" id="senha" placeholder="Digite uma senha">
                                 </div>
-                                <a href="index.html" class="btn btn-primary">Cadastrar</a>
-                                <a href="login.html" class="btn btn-light">Cancelar</a>
+                                <a href="{{ url_for('index') }}" class="btn btn-primary">Cadastrar</a>
+                                <a href="{{ url_for('login') }}" class="btn btn-light">Cancelar</a>
                             </form>
 
                         </div>
