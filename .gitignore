@@ -1,0 +1,5 @@
+.vscode
+__pycache__
+*.pyc
+/src/controllers/__pycache__/
+/src/models/__pycache__/
