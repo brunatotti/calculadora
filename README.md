@@ -47,18 +47,18 @@ requirements.txt</pre>
 
 ### Modelo MVC (Model View Controller)
 #### Model
-- Em <b>Controllers</b> consta toda a lógica (Direcionamento das páginas, o que ocorre ao clicar)
-
-#### Controller
 - Em <b>Models</b> constam as tabelas criadas. O que é feito no controller resultará na manipulação do banco de bados. 
 
 #### View
-- Em <b>View</b> os repositórios são: Static e Template. 
-- Em <b>Static</b> constam os arquivos estáticos (html, img e js)
+- Em <b>View</b> os repositórios são: <b>Static e Template</b>;
+- Em <b>Static</b> constam os arquivos estáticos (html, img e js);
 - Em <b>Templates</b> constam as páginas html.
 
+#### Controller
+- Em <b>Controllers</b> consta toda a lógica (Direcionamento das páginas, o que ocorre ao clicar)
+
 ## Banco de Dados
--Para a criação do banco de dados foi usado o ORM SQLALCHEMY. É uma ferramenta utilizada para facilitar a criação e comunicação com o banco de dados. 
+-Para a criação do banco de dados foi usado o <b>ORM SQLALCHEMY</b>. É uma ferramenta utilizada para facilitar a criação e comunicação com o banco de dados;
 - Toda configuração necessária consta no arquivo app.py
 
 <pre>
