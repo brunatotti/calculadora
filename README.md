@@ -51,7 +51,7 @@ requirements.txt</pre>
 
 #### View
 - Em <b>View</b> os repositórios são: <b>Static e Template</b>;
-- Em <b>Static</b> constam os arquivos estáticos (html, img e js);
+- Em <b>Static</b> constam os arquivos estáticos (css, img e js);
 - Em <b>Templates</b> constam as páginas html.
 
 #### Controller
