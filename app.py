@@ -1,22 +1,48 @@
 from flask import Flask
-from flask.templating import render_template
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 
-app = Flask (__name__)
+import os
 
-@app.route("/", methods = ['GET'])
-@app.route ("/login", methods = ['GET'])
-@app.route ("/bruna", methods = ['GET'])
-def login ():
-     return render_template('login.html')
+#Variavel que controla a aplicação toda
+app = Flask(__name__)
 
-@app.route("/cadastro", methods = ['GET'])
-def cadastro ():
-    return render_template('cadastro.html')
+#Banco de dados
+db_path = os.path.dirname(os.path.abspath(__file__))
+db_file = "sqlite:///calculadora.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = db_file
+app.config['SECRET_KEY'] = 'sifghfiuasasdkmlkfmg23165'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-@app.route("/index", methods = ['GET'])
-def index ():
-    return render_template('index.html')
+#Instância do SQLAlchemy
+db = SQLAlchemy(app)
 
-@app.route("/historico", methods = ['GET'])
-def historico ():
-    return render_template('historico.html')
+#Login da aplicação
+login_manager = LoginManager()
+login_manager.login_view = 'autenticacao.login'
+login_manager.init_app(app)
+
+from .models import User
+from .models import Calculadora
+
+#Criar banco de dados (tabelas)
+db.create_all(app=app)
+
+#Logar
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+from .controllers import autenticacao as autenticacao_bp
+app.register_blueprint(autenticacao_bp)
+
+from .controllers import calculadora as calculadora_bp
+app.register_blueprint(calculadora_bp)
+
+from .controllers import historico as historico_bp
+app.register_blueprint(historico_bp)
+
+#Segurança para executar o arquivo principal
+if __name__ == '__main__':
+    app.run(debug=True,host='0.0.0.0', port='5000')
+    

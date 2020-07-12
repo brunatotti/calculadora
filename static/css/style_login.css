@@ -1,0 +1,65 @@
+form {
+    border: 2px solid #f1f1f1;
+    font-family: sans-serif;
+}
+
+input[type=email],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.entrar_botao {
+    width: 100%;
+    background-color: #4e73df!important;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 12px;
+    margin: 10px 0px 1px 0px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.efetuar_cadastro {
+    display: block;
+    background-color: gray;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 12px;
+    margin: 10px 0px 1px 0px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+    
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 20%;
+}
+
+.container {
+    padding: 5px 400px;
+}
+
+/*Responsividade*/
+@media screen and (max-width: 500px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}

@@ -1,5 +1,6 @@
 .vscode
 __pycache__
 *.pyc
-/src/controllers/__pycache__/
-/src/models/__pycache__/
+controllers/__pycache__/
+models/__pycache__/
+*.db

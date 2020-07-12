@@ -1,182 +1,42 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Calculadora Bruna Totti</title>
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-</head>
-
-<body id="page-top">
-
-    <!-- NAV BAR -->
-    <div class="d-flex flex-column" id="content-wrapper">
-        <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-            <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-primary clean-navbar">
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5 col-xl-6">
-                            <a class="navbar-brand logo" href="{{ url_for('index') }}">
-                                <img src="../static/img/logo_calculadora_branco_horizontal.png" alt="Avatar" class="avatar">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-xl-1"></div>
-                        <div class="col-lg-4 col-xl-5">
-                            <div class="collapse navbar-collapse" id="navcol-1">
-                                <ul class="nav navbar-nav ml-auto">
-                                    <li class="nav-item" role="presentation"><a class="btn nav-link active" href="{{ url_for('index') }}">Início</a></li>
-                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url_for('historico') }}">Histórico</a></li>
-                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url_for('login') }}">Sair</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+{% block content %}
+<div class="row">
+    <div class="col-lg-12 col-xl-12">
+        <div class="container">
+            <div class="card shadow">
+                <div class="card-header d-flex">
+                    <h6 class="text-primary font-weight-bold m-0">Histórico das operações</h6>
                 </div>
-                
-            </nav>
-        </nav>
-    </div>
-
-    <!-- CONTEÚDO -->
-    <div class="row">
-        <div class="col-lg-12 col-xl-12">
-            <div class="container">
-                <div class="card shadow">
-                    <div class="card-header d-flex">
-                        <h6 class="text-primary font-weight-bold m-0">Histórico das operações</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="container">
-                            <p>Verifique abaixo qual usuário efetuou qual operação e o qual horário.</p>
-                            <div class="card-body">
-                                <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                                    <table class="table my-0" id="dataTable">
-                                        <thead>
-                                            <tr>
-                                                <th>Nome do usuário</th>
-                                                <th>Operação realizada</th>
-                                                <th>Operandos</th>
-                                                <th>Horário</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img class="rounded-circle mr-2" width="30" height="30" src="../static/img/brunatotti.jpg">Bruna Totti</td>
-                                                <td>Soma</td>
-                                                <td>50 e 50</td>
-                                                <td>18:34</td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nome do usuário</th>
-                                                <th>Operação realizada</th>
-                                                <th>Operandos</th>
-                                                <th>Horário</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                                <!--
-                                <div class="row">
-                                    <div class="col-md-6 align-self-center">
-                                        <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Mostrando 1 a 10 de 27</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                            <ul class="pagination">
-                                                <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                                -->
+                <div class="card-body">
+                    <div class="container">
+                        <p>Verifique abaixo qual usuário efetuou qual operação e o qual horário.</p>
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome do usuário</th>
+                                            <th>Expressão</th>
+                                            <th>Horário</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for calculo in calculos %}
+                                        <tr>
+                                            <td>{{calculo.user_name}}</td>
+                                            <td>{{calculo.expressao}}</td>
+                                            <td>{{calculo.created}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- RODAPÉ -->
-        <footer class="sticky-footer">
-            <div class="container my-auto">
-                <div class="text-center my-auto copyright"><span>Copyright © Brand 2020</span></div>
-            </div>
-        </footer>
     </div>
-
-    <!-- VOLTAR PARA TOPO -->
-    <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
-
-    <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-    <script src="../static/js/script.min.js"></script>
-
-</body></html>
+</div>
+{% endblock %}

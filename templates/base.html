@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Calculadora Bruna Totti</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+</head>
+
+<body id="page-top">
+
+    <!-- NAV BAR -->
+    <div class="d-flex flex-column" id="content-wrapper">
+        <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+            <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-primary clean-navbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-xl-6">
+                            <a class="navbar-brand logo" href="index">
+                                <img src="{{url_for('static', filename='img/logo_calculadora_branco_horizontal.png')}}" alt="Avatar" class="avatar">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-xl-1"></div>
+                        <div class="col-lg-4 col-xl-5">
+                            <div class="collapse navbar-collapse" id="navcol-1">
+                                <ul class="nav navbar-nav ml-auto">
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url_for('calculadora.calculo') }}">Início</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url_for('historico.get_historico') }}">Histórico</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url_for('autenticacao.logout') }}">Sair</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+    </div>
+    <!-- END NAV BAR -->
+
+    <!-- CONTEÚDO -->
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <!-- END CONTEÚDO -->
+
+    <!-- RODAPÉ -->
+    <footer class="bg-white sticky-footer">
+        <div class="container my-auto">
+            <div class="text-center my-auto copyright"><span>Copyright © Brand 2020</span></div>
+        </div>
+    </footer>
+    <!-- END RODAPÉ -->
+
+    <!-- VOLTAR PARA TOPO -->
+    <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    <!-- END VOLTAR PARA TOPO -->
+
+    <!-- SCRIPTS -->
+    <script src="{{url_for('static', filename='js/javascript.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+    <!-- END SCRIPTS -->
+
+</body>
+
+</html>
